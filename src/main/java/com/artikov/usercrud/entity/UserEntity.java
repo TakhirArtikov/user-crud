@@ -4,21 +4,19 @@ import com.artikov.usercrud.dto.UserDto;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
+@Table(name = "users_table")
 public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
-    private String fName;
-    private String lName;
+    private String firstName;
+    private String lastName;
     private String dateOfBirth;
     private String city;
     private String mobileNumber;

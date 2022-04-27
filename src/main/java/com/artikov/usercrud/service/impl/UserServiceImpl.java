@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Transactional
-    public void deleteUser(String id){
+    public void deleteUser(Long id){
         Optional<UserEntity> userEntityOptional = userRepository.findById(id);
         userEntityOptional.ifPresent(userEntity -> userRepository.delete(userEntity));
     }

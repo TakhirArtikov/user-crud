@@ -1,12 +1,15 @@
 package com.artikov.usercrud.dto;
 
+import lombok.Data;
+
+@Data
 public class UserDto {
 
-    String id;
-    String fname;
-    String lname;
-    String dob;
-    String city;
-    String mobile_number;
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private String dateOfBirth;
+    private String city;
+    private String mobileNumber;
 
 }
