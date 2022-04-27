@@ -1,0 +1,36 @@
+version: '3.1'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: spring_boot
+    ports:
+      - "8100:8080"
+    volumes:
+      - ../server_data:${APP_DIR}/data
+      - ../server_logs:${APP_DIR}/logs
+    depends_on:
+      - db
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=${PROFILE}
+
+  db:
+    image: postgres:10.3-alpine
+    container_name: db
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=user_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+volumes:
+  server_data:
+  server_logs:
+  db_data:
