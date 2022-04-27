@@ -9,7 +9,7 @@ This is CRUD project which deals with User details. There are 4 endpoints:
 The link to test the project:
 http://localhost:8080/swagger-ui/index.html
 
-![](.png)
+![](img/img.png)
 
 ### To run project :
 ```sh
