@@ -14,7 +14,9 @@ http://localhost:8080/swagger-ui/index.html
 ### To run project :
 
 Install PostgreSQL and start the server on 5432
+
 Create user with this credentials:
+
 username: postgres
 password: postgres
 
