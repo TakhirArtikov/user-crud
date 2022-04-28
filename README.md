@@ -12,6 +12,16 @@ http://localhost:8080/swagger-ui/index.html
 ![](img/img.png)
 
 ### To run project :
+
+Install PostgreSQL and start the server on 5432
+Create user with this credentials:
+username: postgres
+password: postgres
+
+Create database with the name of "user_db"
+
+Run the project
+
 ```sh
 docker- compose up --build -d
 ```
